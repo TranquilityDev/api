@@ -8,6 +8,10 @@ router.get('/', function(req, res, next) {
     res.redirect('https://www.tranquility.tech');
 });
 
+router.get('/hello', function(req, res, next) {
+    res.josn('hello')
+});
+
 router.get('/ntou', async(req, res, next) => {
     // authorize
     let device = await Mlab.getDevice();
