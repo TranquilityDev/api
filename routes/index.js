@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/hello', function(req, res, next) {
-    res.josn('hello')
+    res.json('hello')
 });
 
 router.get('/ntou', async(req, res, next) => {
