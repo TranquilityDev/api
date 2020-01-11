@@ -34,11 +34,11 @@ router.get('/ntou', async(req, res, next) => {
 
     if (req.query.flows && req.query.t) {
         if (Array.isArray(req.query.flows)) {
-            req.query.flows.forEach((flow) => {
+            req.query.flows.forEach((flow, index) => {
                 let data = {
                     flow: Number(flow),
                     o2: Math.sign(flow) > 0 ? randomNum_18_19() : randomNum_15_16(),
-                    t: Number(req.query.t),
+                    t: Number(req.query.t[index]),
                     created_at: new Date()
                 }
 
